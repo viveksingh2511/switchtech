@@ -1,0 +1,312 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --card-bg: rgba(237, 235, 235, 0.9);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --badge-bg: rgba(59, 130, 246, 0.15);
+  --shadow: rgba(0, 0, 0, 0.12);
+}
+
+/* 🌙 Dark Mode Variables */
+body.dark {
+  --bg: #020617;
+  --bg-soft: #020617;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --text-main: #ffffff;
+  --text-muted: #ffffff;
+  --primary: #60a5fa;
+  --primary-dark: #3b82f6;
+  --badge-bg: rgba(96, 165, 250, 0.2);
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Auto Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    --bg: #020617;
+    --bg-soft: #020617;
+    --card-bg: rgba(255, 255, 255, 0.04);
+    --text-main: #ffffff;
+    --text-muted: #ffffff;
+    --primary: #60a5fa;
+    --primary-dark: #3b82f6;
+    --badge-bg: rgba(96, 165, 250, 0.2);
+    --shadow: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: "Arial", sans-serif;
+}
+
+.course-section {
+  padding: 80px 16px;
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.course-header {
+  text-align: center;
+  margin-bottom: 48px;
+  animation: fadeUp 0.4s ease forwards;
+}
+
+.course-title {
+  font-size: 2.5rem;
+  margin: 16px 0;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.course-main {
+  color: var(--text-main);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.course-header p {
+  max-width: 720px;
+  margin: auto;
+  color: var(--text-muted);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--badge-bg);
+  color: var(--primary) !important;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Dark mode overrides for header */
+body.dark .course-main {
+  color: #ffffff;
+}
+
+body.dark .gradient-text {
+  background: none;
+  color: #ffffff;
+}
+
+/* =========================
+   TECH STACK IMAGE
+========================= */
+.tech-stack {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.tech-stack img {
+  max-width: 100%;
+  border-radius: 14px;
+  animation: floatImage 3s ease-in-out infinite;
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-stack img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 45px rgba(59, 130, 246, 0.5);
+}
+
+/* =========================
+   MODULES
+========================= */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.module-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeUp 0.35s ease forwards;
+  color: var(--text-main);
+}
+
+.module-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px var(--shadow);
+}
+
+.module-card .icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.module-card h3 {
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.module-card p {
+  color: var(--text-muted);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--badge-bg);
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+/* =========================
+   WHY SECTION
+========================= */
+.why-section {
+  text-align: center;
+  margin-bottom: 56px;
+  color: var(--text-main);
+}
+
+.why-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.why-section li {
+  margin: 8px 0;
+  color: var(--text-muted);
+}
+
+/* =========================
+   STATS
+========================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.stats div {
+  text-align: center;
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 12px;
+  color: var(--text-main);
+}
+
+.stats strong {
+  font-size: 1.8rem;
+  display: block;
+  color: var(--primary);
+}
+
+.stats span {
+  color: var(--text-muted);
+}
+
+/* =========================
+   CTA
+========================= */
+.cta {
+  text-align: center;
+}
+
+.cta button {
+  padding: 14px 36px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.45);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .tech-stack img {
+    animation: none;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .course-header h2 {
+    font-size: 2rem;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   FORCE WHITE TEXT IN DARK MODE (optional)
+========================= */
+body.dark,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark li,
+body.dark span {
+  color: #ffffff !important;
+}

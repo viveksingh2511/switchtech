@@ -1,0 +1,18 @@
+.instructor-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instructor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.progress-animate {
+  animation: grow 1.2s ease-in-out;
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+}

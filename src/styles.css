@@ -1,0 +1,42 @@
+:root {
+--bg: #ffffff;
+--text: #222222;
+--muted: #6c757d;
+--primary: #0d6efd;
+}
+
+
+[data-theme="dark"] {
+--bg: #0b1220;
+--text: #e6eef6;
+--muted: #9aa7b4;
+--primary: #3da5ff;
+}
+
+
+body {
+background: var(--bg);
+color: var(--text);
+transition: background 200ms ease, color 200ms ease;
+}
+
+
+.navbar, .bg-light {
+background: var(--bg) !important;
+}
+
+
+.hero-visual img {
+opacity: 0.95;
+transform: translateY(0);
+}
+
+
+/* small animation for cards */
+.card { border-radius: 12px; }
+
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+.hero-visual { margin-top: 20px }
+}
