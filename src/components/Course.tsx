@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/course.css"
 import Stack_Icons from "../assets/Technology_stack_icons.webp"
 

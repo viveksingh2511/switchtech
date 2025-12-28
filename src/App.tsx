@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import TopNavbar from "./components/TopNavbar";
 import Footer from "./components/Footer";
@@ -31,8 +31,13 @@ localStorage.setItem("theme", theme);
 }, [theme]);
 
 
-const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
-ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+const scrollTo = (ref: React.RefObject<HTMLDivElement | null>) => {
+  if (ref.current) {
+    ref.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 };
 
 
