@@ -1,16 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 
 const Contact = () => {
-    const [status, setStatus] = useState<string>("");
+    // const [status, setStatus] = useState<string>("");
 
 
-    const onSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus("Sending...");
-        // TODO: hook to your backend or email service
-        setTimeout(() => setStatus("Message sent (demo)."), 1000);
-    };
+    // const onSubmit = (e: React.FormEvent) => {
+    //     e.preventDefault();
+    //     setStatus("Sending...");
+    //     // TODO: hook to your backend or email service
+    //     setTimeout(() => setStatus("Message sent (demo)."), 1000);
+    // };
 
 
     return (

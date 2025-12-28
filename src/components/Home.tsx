@@ -13,7 +13,7 @@ export default function Home({ onContactClick }: Props) {
 
                         {/* Badge */}
                         <div className="mb-3 fade-up delay-1">
-                            <span className="badge badge-new" style={{color:"#ec3e13"}}>
+                            <span className="badge badge-new" style={{ color: "#ec3e13" }}>
                                 🔥 New Batch Starting August 15th, 2025
                             </span>
                         </div>
@@ -21,8 +21,8 @@ export default function Home({ onContactClick }: Props) {
                         {/* Heading */}
                         <h1 className="hero-title fade-up delay-2">
                             Become a&nbsp;
-                            <span className="gradient-primary">Job-Ready</span><br/>
-                                <span className="gradient-danger">Data Engineer</span>
+                            <span className="gradient-primary">Job-Ready</span><br />
+                            <span className="gradient-danger">Data Engineer</span>
                         </h1>
 
                         {/* Description */}
@@ -46,9 +46,13 @@ export default function Home({ onContactClick }: Props) {
 
                         {/* CTA Buttons */}
                         <div className="d-flex flex-column flex-sm-row gap-3 fade-up delay-5">
-                            <button className="btn btn-danger btn-lg hero-btn fs-6">
+                            <button
+                                className="btn btn-danger btn-lg hero-btn fs-6"
+                                onClick={onContactClick}
+                            >
                                 Enroll Now <i className="bi bi-box-arrow-up-right ms-1"></i>
                             </button>
+
                             <button className="btn btn-outline-primary btn-lg glass-btn fs-6">
                                 Download Curriculum
                             </button>
