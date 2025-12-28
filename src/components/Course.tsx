@@ -22,52 +22,60 @@ const Course = () => {
 
                 {/* Tech Stack Image */}
                 <div className="tech-stack">
-                    <img src={Stack_Icons} alt="Tech Stack" width="50%"/>
+                    <img src={Stack_Icons} alt="Tech Stack" width="50%" />
                 </div>
 
                 {/* Modules */}
                 <div className="modules-grid">
-                    <div className="module-card">
+                    <div className="module-card" onClick={() => window.location.href = "/1_Introduction_to_Python.html"} style={{ cursor: "pointer" }}>
                         <div className="icon">🐍</div>
                         <h3>Python</h3>
                         <span className="tag">Core Language</span>
                         <p>Build strong Python foundations for ETL, automation, and data workflows.</p>
                     </div>
 
-                    <div className="module-card">
+                    <div className="module-card" onClick={() => window.location.href = "/sql_guide.html"} style={{ cursor: "pointer" }}>
                         <div className="icon">🗄️</div>
                         <h3>SQL</h3>
                         <span className="tag">Core Skill</span>
                         <p>Query, clean, transform, and optimize large-scale datasets.</p>
                     </div>
 
-                    <div className="module-card">
+                    <div className="module-card" onClick={() => window.location.href = "/Apache AirFlow.html"} style={{ cursor: "pointer" }}>
                         <div className="icon">🔁</div>
                         <h3>Apache Airflow</h3>
                         <span className="tag">Orchestration</span>
                         <p>Automate and monitor production-grade data pipelines.</p>
                     </div>
 
-                    <div className="module-card">
+                    <div className="module-card" onClick={() => window.location.href = "/Jenkins.html"} style={{ cursor: "pointer" }}>
                         <div className="icon">⚙️</div>
                         <h3>Jenkins</h3>
                         <span className="tag">CI/CD</span>
                         <p>Automate build, test, and deployment pipelines.</p>
                     </div>
 
-                    <div className="module-card">
+                    <div className="module-card" onClick={() => window.location.href = "/AWS.html"} style={{ cursor: "pointer" }}>
                         <div className="icon">☁️</div>
-                        <h3>AWS & GCP</h3>
+                        <h3>AWS</h3>
                         <span className="tag">Cloud</span>
                         <p>Deploy scalable data systems on cloud platforms.</p>
                     </div>
 
-                    <div className="module-card">
-                        <div className="icon">📊</div>
-                        <h3>PySpark</h3>
-                        <span className="tag">Big Data</span>
-                        <p>Process massive datasets using distributed computing.</p>
+                    <div
+                        className="module-card"
+                        onClick={() => window.location.href = "/GCP.html"}
+                        style={{ cursor: "pointer" }}
+                    >
+                        <div className="icon">☁️</div>
+                        <h3>GCP</h3>
+                        <span className="tag">Cloud & Big Data</span>
+                        <p>
+                            Build and manage scalable data pipelines using BigQuery, Cloud Storage,
+                            Dataflow, and Pub/Sub on Google Cloud.
+                        </p>
                     </div>
+
                 </div>
 
                 {/* Why Choose */}
